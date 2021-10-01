@@ -27,23 +27,4 @@ class Stack: Section, ObservableObject, Identifiable {
         self.orientation = orientation
         self.children = children
     }
-    
-//    func draw() -> AnyView {
-//        switch orientation {
-//        case .horizontal:
-//            return HStack {
-//                ForEach(0..<children.count) { i in
-//                    let child = self.children[i]
-//                    child.draw()
-//                }
-//            }.eraseToAnyView()
-//        case .vertical:
-//            return VStack {
-//                ForEach(0..<children.count) { i in
-//                    let child = self.children[i]
-//                    child.draw()
-//                }
-//            }.eraseToAnyView()
-//        }
-//    }
 }

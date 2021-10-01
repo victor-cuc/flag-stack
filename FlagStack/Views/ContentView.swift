@@ -8,47 +8,48 @@
 import SwiftUI
 
 struct ContentView: View {
-
-    @State var selectedColor: Color = .yellow
     @StateObject private var root: Stack = Stack(orientation: .horizontal
-        , children:
-        [
-            Stack(orientation: .vertical, children: [
-                Stripe(color: .blue),
-                Stack(orientation: .vertical, children: [
-                    Stripe(color: .white),
-                    Stripe(color: .red),
-                    Stripe(color: .white),
-                    Stripe(color: .red),
-                    Stripe(color: .white),
-                    Stripe(color: .red),
-                    Stripe(color: .white),
-                    Stripe(color: .red),
-                    Stripe(color: .white),
-                ])
-            ]),
-            Stack(orientation: .vertical, children: [
-                Stripe(color: .red),
-                Stripe(color: .white),
-                Stripe(color: .red),
-                Stripe(color: .white),
-                Stripe(color: .red),
-                Stripe(color: .white),
-                Stripe(color: .red),
-                Stripe(color: .white),
-                Stripe(color: .red),
-                Stripe(color: .white),
-                Stripe(color: .red),
-                Stripe(color: .white),
-                Stripe(color: .red),
-                Stripe(color: .white),
-                Stripe(color: .red),
-                Stripe(color: .white),
-                Stripe(color: .red),
-                Stripe(color: .white),
-            ])
-        ]
+                                                 , children:
+                                                    [
+                                                        Stack(orientation: .vertical, children: [
+                                                            Stripe(color: .blue),
+                                                            Stack(orientation: .vertical, children: [
+                                                                Stripe(color: .white),
+                                                                Stripe(color: .red),
+                                                                Stripe(color: .white),
+                                                                Stripe(color: .red),
+                                                                Stripe(color: .white),
+                                                                Stripe(color: .red),
+                                                                Stripe(color: .white),
+                                                                Stripe(color: .red),
+                                                                Stripe(color: .white),
+                                                            ])
+                                                        ]),
+                                                        Stack(orientation: .vertical, children: [
+                                                            Stripe(color: .red),
+                                                            Stripe(color: .white),
+                                                            Stripe(color: .red),
+                                                            Stripe(color: .white),
+                                                            Stripe(color: .red),
+                                                            Stripe(color: .white),
+                                                            Stripe(color: .red),
+                                                            Stripe(color: .white),
+                                                            Stripe(color: .red),
+                                                            Stripe(color: .white),
+                                                            Stripe(color: .red),
+                                                            Stripe(color: .white),
+                                                            Stripe(color: .red),
+                                                            Stripe(color: .white),
+                                                            Stripe(color: .red),
+                                                            Stripe(color: .white),
+                                                            Stripe(color: .red),
+                                                            Stripe(color: .white),
+                                                        ])
+                                                    ]
     )
+
+    @State var selectedColor: Color = .gray
+    @State var currentStack: Stack? = nil
     
     var body: some View {
         VStack {
@@ -57,7 +58,7 @@ struct ContentView: View {
                 .padding(EdgeInsets(top: 64, leading: 0, bottom: 32, trailing: 0))
             ScrollView {
                 VStack {
-                    ExtractedView(root: root)
+                    ExtractedView(root: root, selectedColor: $selectedColor)
                 }
             }
         }
@@ -72,6 +73,7 @@ struct ContentView_Previews: PreviewProvider {
 
 struct ExtractedView: View {
     @ObservedObject var root: Stack
+    @Binding var selectedColor: Color
     
     var body: some View {
         VStack {
@@ -104,17 +106,21 @@ struct ExtractedView: View {
                 }
             }
             HStack {
+//                Button(action: {
+//
+//                }) {
+//                    Circle()
+//                        .fill(
+//                            AngularGradient(colors: [.red, .yellow, .blue, .purple], center: .center)
+//                        )
+//                        .frame(width: 48, height: 48)
+//                }
+                ColorPicker("", selection: $selectedColor)
+                    .labelsHidden()
+                    .frame(width: 48, height: 48, alignment: .center)
+                    .scaleEffect(1.7)
                 Button(action: {
-                    
-                }) {
-                    Circle()
-                        .fill(
-                            AngularGradient(colors: [.red, .yellow, .blue, .purple], center: .center)
-                        )
-                        .frame(width: 48, height: 48)
-                }
-                Button(action: {
-                    root.children.append(Stripe(color: .yellow))
+                    root.children.append(Stripe(color: selectedColor))
                 }) {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
