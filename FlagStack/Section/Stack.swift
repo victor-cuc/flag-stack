@@ -12,9 +12,11 @@ enum Orientation {
     case vertical
 }
 
-class Stack: Section, ObservableObject {
+class Stack: Section, ObservableObject, Identifiable {
     var orientation: Orientation
     @Published var children: [Section]
+    
+    var id: String = UUID().uuidString
     
     init(orientation: Orientation) {
         self.orientation = orientation
@@ -26,22 +28,22 @@ class Stack: Section, ObservableObject {
         self.children = children
     }
     
-    func draw() -> AnyView {
-        switch orientation {
-        case .horizontal:
-            return HStack {
-                ForEach(0..<children.count) { i in
-                    let child = self.children[i]
-                    child.draw()
-                }
-            }.eraseToAnyView()
-        case .vertical:
-            return VStack {
-                ForEach(0..<children.count) { i in
-                    let child = self.children[i]
-                    child.draw()
-                }
-            }.eraseToAnyView()
-        }
-    }
+//    func draw() -> AnyView {
+//        switch orientation {
+//        case .horizontal:
+//            return HStack {
+//                ForEach(0..<children.count) { i in
+//                    let child = self.children[i]
+//                    child.draw()
+//                }
+//            }.eraseToAnyView()
+//        case .vertical:
+//            return VStack {
+//                ForEach(0..<children.count) { i in
+//                    let child = self.children[i]
+//                    child.draw()
+//                }
+//            }.eraseToAnyView()
+//        }
+//    }
 }

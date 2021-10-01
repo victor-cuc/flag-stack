@@ -7,15 +7,17 @@
 
 import SwiftUI
 
-class Stripe: Section {
+class Stripe: Section, Identifiable{
     var color: Color = .gray
     var emblem: Image? = nil
+    
+    var id: String = UUID().uuidString
     
     init(color: Color) {
         self.color = color
     }
     
-    func draw() -> AnyView {
-        return color.eraseToAnyView()
-    }
+//    func draw() -> AnyView {
+//        return color.eraseToAnyView()
+//    }
 }

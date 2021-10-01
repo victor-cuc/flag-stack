@@ -13,5 +13,7 @@ import SwiftUI
 //}
 
 protocol Section {
-    func draw() -> AnyView
+    
+    var id: String { get set }
+//    func draw() -> AnyView
 }
