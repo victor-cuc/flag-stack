@@ -106,15 +106,6 @@ struct ExtractedView: View {
                 }
             }
             HStack {
-//                Button(action: {
-//
-//                }) {
-//                    Circle()
-//                        .fill(
-//                            AngularGradient(colors: [.red, .yellow, .blue, .purple], center: .center)
-//                        )
-//                        .frame(width: 48, height: 48)
-//                }
                 ColorPicker("", selection: $selectedColor)
                     .labelsHidden()
                     .frame(width: 48, height: 48, alignment: .center)
@@ -125,7 +116,7 @@ struct ExtractedView: View {
                     Image(systemName: "plus.circle.fill")
                         .resizable()
                         .frame(width: 48, height: 48)
-                        .foregroundColor(Color.yellow)
+                        .foregroundColor(Color.gray)
                 }
             }
             .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity)

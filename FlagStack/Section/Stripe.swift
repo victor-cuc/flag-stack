@@ -16,8 +16,4 @@ class Stripe: Section, Identifiable{
     init(color: Color) {
         self.color = color
     }
-    
-//    func draw() -> AnyView {
-//        return color.eraseToAnyView()
-//    }
 }

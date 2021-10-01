@@ -7,13 +7,7 @@
 
 import SwiftUI
 
-//enum Section {
-//    case stack(Stack)
-//    case stripe(Stripe)
-//}
 
 protocol Section {
-    
     var id: String { get set }
-//    func draw() -> AnyView
 }
