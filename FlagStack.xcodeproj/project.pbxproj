@@ -12,6 +12,7 @@
 		575E42CD27049B4B00399BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575E42CC27049B4B00399BC7 /* Assets.xcassets */; };
 		575E42D027049B4B00399BC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575E42CF27049B4B00399BC7 /* Preview Assets.xcassets */; };
 		579E3539270AE7CC007D65C6 /* FlagViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E3538270AE7CC007D65C6 /* FlagViewModel.swift */; };
+		579E353C270B1B19007D65C6 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 579E353B270B1B19007D65C6 /* ImagePicker.swift */; };
 		57D180D72705AF02001471BF /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D180D62705AF02001471BF /* Section.swift */; };
 		57D180D92705B124001471BF /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D180D82705B124001471BF /* Stack.swift */; };
 		57D180DB2705B242001471BF /* Stripe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D180DA2705B242001471BF /* Stripe.swift */; };
@@ -26,6 +27,7 @@
 		575E42CC27049B4B00399BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		575E42CF27049B4B00399BC7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		579E3538270AE7CC007D65C6 /* FlagViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagViewModel.swift; sourceTree = "<group>"; };
+		579E353B270B1B19007D65C6 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		57D180D62705AF02001471BF /* Section.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		57D180D82705B124001471BF /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
 		57D180DA2705B242001471BF /* Stripe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stripe.swift; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				57D180DD2705E31E001471BF /* Utils.swift */,
+				579E353B270B1B19007D65C6 /* ImagePicker.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 				57D180D92705B124001471BF /* Stack.swift in Sources */,
 				57D180DB2705B242001471BF /* Stripe.swift in Sources */,
 				575E42CB27049B4700399BC7 /* ContentView.swift in Sources */,
+				579E353C270B1B19007D65C6 /* ImagePicker.swift in Sources */,
 				57D180D72705AF02001471BF /* Section.swift in Sources */,
 				575E42C927049B4700399BC7 /* FlagStackApp.swift in Sources */,
 				57D180E127060807001471BF /* FlagView.swift in Sources */,
