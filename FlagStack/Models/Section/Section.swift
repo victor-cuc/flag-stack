@@ -9,5 +9,5 @@ import SwiftUI
 
 
 protocol Section {
-    var id: String { get set }
+    var id: String { get }
 }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class Stripe: Section, Identifiable{
+class Stripe: Section, Identifiable {
     var color: Color = .gray
     var emblem: Image? = nil
     
